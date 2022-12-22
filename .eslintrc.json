@@ -1,5 +1,4 @@
 {
   "extends": ["airbnb", "airbnb/hooks"],
-  "rules": { "semi": "off" },
-  "ignorePatterns":["Deno"]
+  "rules": { "semi": "off", "no-undef": "off" }
 }
