@@ -6,21 +6,9 @@
     "3:15  error  Missing trailing comma                                                       comma-dangle",
     "4:8   error  Unable to resolve path to module 'https://deno.land/std/testing/asserts.ts'  import/no-unresolved",
     "5:34  error  Unexpected use of file extension \"js\" for \"./blackjack_oop.js\"               import/extensions",
-    "7:1   error  'Deno' is not defined                                                        no-undef",
-    "12:1   error  'Deno' is not defined                                                        no-undef",
-    "17:1   error  'Deno' is not defined                                                        no-undef",
-    "22:1   error  'Deno' is not defined                                                        no-undef",
-    "30:1   error  'Deno' is not defined                                                        no-undef",
-    "38:1   error  'Deno' is not defined                                                        no-undef",
     "40:5   error  Do not use 'new' for side effects                                            no-new",
-    "44:1   error  'Deno' is not defined                                                        no-undef",
-    "48:1   error  'Deno' is not defined                                                        no-undef",
-    "53:1   error  'Deno' is not defined                                                        no-undef",
     "59:23  error  Missing trailing comma                                                       comma-dangle",
-    "64:1   error  'Deno' is not defined                                                        no-undef",
-    "69:1   error  'Deno' is not defined                                                        no-undef",
     "73:23  error  Missing trailing comma                                                       comma-dangle",
-    "78:1   error  'Deno' is not defined                                                        no-undef",
     "86:5   error  Strings must use singlequote                                                 quotes",
     "86:11  error  Strings must use singlequote                                                 quotes",
     "86:17  error  Strings must use singlequote                                                 quotes",
@@ -75,7 +63,7 @@
     "89:78  error  Strings must use singlequote                                                 quotes",
     "89:82  error  Missing trailing comma                                                       comma-dangle"
    ],
-   "score": 93.3
+   "score": 40.0
   },
   {
    "file_name": "./blackjack/blackjack_oop.js",
@@ -107,10 +95,9 @@
     "5:52  error  'VendingMachine' is defined but never used                                   no-unused-vars",
     "5:67  error  Expected a line break before this closing brace                              object-curly-newline",
     "5:74  error  Unexpected use of file extension \"js\" for \"./blockbuster_oop.js\"             import/extensions",
-    "7:1   error  'Deno' is not defined                                                        no-undef",
     "13:88  error  Newline required at end of file but not found                                eol-last"
    ],
-   "score": 0
+   "score": 9.1
   },
   {
    "file_name": "./blockbuster/blockbuster_oop.js",
@@ -126,29 +113,21 @@
     "3:15  error  Missing trailing comma                                                       comma-dangle",
     "4:8   error  Unable to resolve path to module 'https://deno.land/std/testing/asserts.ts'  import/no-unresolved",
     "5:23  error  Unexpected use of file extension \"js\" for \"./blockbuster_oop.js\"             import/extensions",
-    "7:1   error  'Deno' is not defined                                                        no-undef",
-    "12:1   error  'Deno' is not defined                                                        no-undef",
-    "17:1   error  'Deno' is not defined                                                        no-undef",
-    "22:1   error  'Deno' is not defined                                                        no-undef",
-    "27:1   error  'Deno' is not defined                                                        no-undef",
-    "32:1   error  'Deno' is not defined                                                        no-undef",
-    "37:1   error  'Deno' is not defined                                                        no-undef",
     "39:5   error  Do not use 'new' for side effects                                            no-new",
     "41:3   error  Newline required at end of file but not found                                eol-last"
    ],
-   "score": 70.6
+   "score": 26.5
   },
   {
    "file_name": "./test.js",
    "errors": [
     "1:1  error  Unexpected var, use let or const instead                               no-var",
     "1:5  error  'testyWesty' is assigned a value but never used                        no-unused-vars",
-    "3:1  error  Expected an assignment or function call and instead saw an expression  no-unused-expressions",
-    "3:1  error  's' is not defined                                                     no-undef",
-    "3:2  error  Newline required at end of file but not found                          eol-last"
+    "2:1  error  Expected an assignment or function call and instead saw an expression  no-unused-expressions",
+    "2:2  error  Newline required at end of file but not found                          eol-last"
    ],
    "score": 0
   }
  ],
- "average_score": 46.8
+ "average_score": 32.0
 }
