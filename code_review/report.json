@@ -1,71 +1,6 @@
 {
  "files": [
   {
-   "file_name": "./blackjack/blackjack_oop_tests.js",
-   "errors": [
-    "3:15  error  Missing trailing comma                                                       comma-dangle",
-    "4:8   error  Unable to resolve path to module 'https://deno.land/std/testing/asserts.ts'  import/no-unresolved",
-    "5:34  error  Unexpected use of file extension \"js\" for \"./blackjack_oop.js\"               import/extensions",
-    "40:5   error  Do not use 'new' for side effects                                            no-new",
-    "59:23  error  Missing trailing comma                                                       comma-dangle",
-    "73:23  error  Missing trailing comma                                                       comma-dangle",
-    "86:5   error  Strings must use singlequote                                                 quotes",
-    "86:11  error  Strings must use singlequote                                                 quotes",
-    "86:17  error  Strings must use singlequote                                                 quotes",
-    "86:23  error  Strings must use singlequote                                                 quotes",
-    "86:29  error  Strings must use singlequote                                                 quotes",
-    "86:35  error  Strings must use singlequote                                                 quotes",
-    "86:41  error  Strings must use singlequote                                                 quotes",
-    "86:47  error  Strings must use singlequote                                                 quotes",
-    "86:53  error  Strings must use singlequote                                                 quotes",
-    "86:59  error  Strings must use singlequote                                                 quotes",
-    "86:66  error  Strings must use singlequote                                                 quotes",
-    "86:72  error  Strings must use singlequote                                                 quotes",
-    "86:78  error  Strings must use singlequote                                                 quotes",
-    "87:5   error  Strings must use singlequote                                                 quotes",
-    "87:11  error  Strings must use singlequote                                                 quotes",
-    "87:17  error  Strings must use singlequote                                                 quotes",
-    "87:23  error  Strings must use singlequote                                                 quotes",
-    "87:29  error  Strings must use singlequote                                                 quotes",
-    "87:35  error  Strings must use singlequote                                                 quotes",
-    "87:41  error  Strings must use singlequote                                                 quotes",
-    "87:47  error  Strings must use singlequote                                                 quotes",
-    "87:53  error  Strings must use singlequote                                                 quotes",
-    "87:59  error  Strings must use singlequote                                                 quotes",
-    "87:66  error  Strings must use singlequote                                                 quotes",
-    "87:72  error  Strings must use singlequote                                                 quotes",
-    "87:78  error  Strings must use singlequote                                                 quotes",
-    "88:5   error  Strings must use singlequote                                                 quotes",
-    "88:11  error  Strings must use singlequote                                                 quotes",
-    "88:17  error  Strings must use singlequote                                                 quotes",
-    "88:23  error  Strings must use singlequote                                                 quotes",
-    "88:29  error  Strings must use singlequote                                                 quotes",
-    "88:35  error  Strings must use singlequote                                                 quotes",
-    "88:41  error  Strings must use singlequote                                                 quotes",
-    "88:47  error  Strings must use singlequote                                                 quotes",
-    "88:53  error  Strings must use singlequote                                                 quotes",
-    "88:59  error  Strings must use singlequote                                                 quotes",
-    "88:66  error  Strings must use singlequote                                                 quotes",
-    "88:72  error  Strings must use singlequote                                                 quotes",
-    "88:78  error  Strings must use singlequote                                                 quotes",
-    "89:5   error  Strings must use singlequote                                                 quotes",
-    "89:11  error  Strings must use singlequote                                                 quotes",
-    "89:17  error  Strings must use singlequote                                                 quotes",
-    "89:23  error  Strings must use singlequote                                                 quotes",
-    "89:29  error  Strings must use singlequote                                                 quotes",
-    "89:35  error  Strings must use singlequote                                                 quotes",
-    "89:41  error  Strings must use singlequote                                                 quotes",
-    "89:47  error  Strings must use singlequote                                                 quotes",
-    "89:53  error  Strings must use singlequote                                                 quotes",
-    "89:59  error  Strings must use singlequote                                                 quotes",
-    "89:66  error  Strings must use singlequote                                                 quotes",
-    "89:72  error  Strings must use singlequote                                                 quotes",
-    "89:78  error  Strings must use singlequote                                                 quotes",
-    "89:82  error  Missing trailing comma                                                       comma-dangle"
-   ],
-   "score": 40.0
-  },
-  {
    "file_name": "./blackjack/blackjack_oop.js",
    "errors": [
     "1:1  error  File has too many classes (3). Maximum allowed is 1           max-classes-per-file",
@@ -117,5 +52,5 @@
    "score": 16.7
   }
  ],
- "average_score": 50.5
+ "average_score": 53.1
 }
