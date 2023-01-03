@@ -99,6 +99,17 @@
 ✖ 11 problems (11 errors, 0 warnings)
   3 errors and 0 warnings potentially fixable with the `--fix` option.
 
+./blockbuster/blockbuster_challenge.tests.js
+
+/home/runner/work/Coursework-Fundamentals-Week2/Coursework-Fundamentals-Week2/blockbuster/blockbuster_challenge.tests.js
+   3:15  error  Missing trailing comma                                                       comma-dangle
+   4:8   error  Unable to resolve path to module 'https://deno.land/std/testing/asserts.ts'  import/no-unresolved
+   5:23  error  Unexpected use of file extension "js" for "./blockbuster_oop.js"             import/extensions
+  39:5   error  Do not use 'new' for side effects                                            no-new
+
+✖ 4 problems (4 errors, 0 warnings)
+  1 error and 0 warnings potentially fixable with the `--fix` option.
+
 ./blockbuster/blockbuster_oop.js
 
 /home/runner/work/Coursework-Fundamentals-Week2/Coursework-Fundamentals-Week2/blockbuster/blockbuster_oop.js
@@ -107,16 +118,4 @@
 
 ✖ 2 problems (2 errors, 0 warnings)
   1 error and 0 warnings potentially fixable with the `--fix` option.
-
-./blockbuster/blockbuster_challenge_tests.js
-
-/home/runner/work/Coursework-Fundamentals-Week2/Coursework-Fundamentals-Week2/blockbuster/blockbuster_challenge_tests.js
-   3:15  error  Missing trailing comma                                                       comma-dangle
-   4:8   error  Unable to resolve path to module 'https://deno.land/std/testing/asserts.ts'  import/no-unresolved
-   5:23  error  Unexpected use of file extension "js" for "./blockbuster_oop.js"             import/extensions
-  39:5   error  Do not use 'new' for side effects                                            no-new
-  41:3   error  Newline required at end of file but not found                                eol-last
-
-✖ 5 problems (5 errors, 0 warnings)
-  2 errors and 0 warnings potentially fixable with the `--fix` option.
 
