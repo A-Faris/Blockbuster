@@ -3,7 +3,7 @@ class Card:
         self.rank = rank
         self.suit = suit
 
-    def toString(self):
+    def to_string(self):
         # TODO Complete this method so that it returns the correct string to represent the hand
         return ''
 

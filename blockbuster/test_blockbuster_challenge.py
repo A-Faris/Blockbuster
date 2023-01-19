@@ -2,6 +2,11 @@ from blockbuster_oop import Video, Customer, VideoStore, VendingMachine, DVD
 import pytest
 
 
+def test_video_release_after_1900():
+    with pytest.raises(Exception):
+        Video('The Dreyfus Affair', 1899, 13)
+
+
 def test_video_title():
     video = Video('The Matrix', 1999, 150)
     assert video.displayTitle() == 'The Matrix (1999)'
