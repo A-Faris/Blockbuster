@@ -2,14 +2,32 @@ from blackjack_oop import Deck, Card, Hand
 import pytest
 
 
-def test_card_rank():
-    card = Card('J', 'H')
-    assert card.rank == 'J'
+@pytest.fixture
+def jack_of_hearts():
+    return Card('J', 'H')
 
 
-def test_card_suit():
-    card = Card('J', 'H')
-    assert card.suit == 'H'
+@pytest.fixture
+def three_of_spades():
+    return Card('3', 'S')
+
+
+@pytest.fixture
+def ace_of_diamonds():
+    return Card('A', 'D')
+
+
+@pytest.fixture
+def ace_of_clubs():
+    return Card('A', 'C')
+
+
+def test_card_rank(jack_of_hearts):
+    assert jack_of_hearts.rank == 'J'
+
+
+def test_card_suit(jack_of_hearts):
+    assert jack_of_hearts.suit == 'H'
 
 
 def test_card_uppercased():
@@ -17,20 +35,14 @@ def test_card_uppercased():
     assert card.suit == 'H'
 
 
-def test_card_points():
-    card = Card('J', 'H')
-    anotherCard = Card('3', 'S')
-
-    assert card.points == 10
-    assert anotherCard.points == 3
+def test_card_points(jack_of_hearts, three_of_spades):
+    assert jack_of_hearts.points == 10
+    assert three_of_spades.points == 3
 
 
-def test_card_to_string():
-    card = Card('J', 'H')
-    anotherCard = Card('3', 'S')
-
-    assert card.toString() == "JH"
-    assert anotherCard.toString() == "3S"
+def test_card_to_string(jack_of_hearts, three_of_spades):
+    assert jack_of_hearts.toString() == "JH"
+    assert three_of_spades.toString() == "3S"
 
 
 def test_hand_raise_exception():
@@ -58,16 +70,15 @@ def test_hand_points_numbers_and_face():
     assert hand.points == 36
 
 
-def test_hand_points_two_aces():
-    hand = Hand([Card('A', 'D'),  Card('A', 'C')])
+def test_hand_points_two_aces(ace_of_diamonds, ace_of_clubs):
+    hand = Hand([ace_of_diamonds,  ace_of_clubs])
     assert hand.points == 21
 
 
-def test_hand_points_two_aces_and_others():
+def test_hand_points_two_aces_and_others(ace_of_diamonds, ace_of_clubs):
     hand = Hand([
         Card('2', 'D'),
-        Card('A', 'D'),
-        Card('A', 'C')
+        ace_of_diamonds,  ace_of_clubs
     ])
     assert hand.points == 24
 

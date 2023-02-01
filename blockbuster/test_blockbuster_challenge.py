@@ -2,14 +2,22 @@ from blockbuster_oop import Video, Customer, VideoStore, VendingMachine, DVD
 import pytest
 
 
+@pytest.fixture
+def the_matrix():
+    return Video('The Matrix', 1999, 150)
+
+
+def test_video_display_price(the_matrix):
+    assert the_matrix.displayPrice() == '£5.00'
+
+
+def test_video_title(the_matrix):
+    assert the_matrix.displayTitle() == 'The Matrix (1999)'
+
+
 def test_video_release_after_1900():
     with pytest.raises(Exception):
         Video('The Dreyfus Affair', 1899, 13)
-
-
-def test_video_title():
-    video = Video('The Matrix', 1999, 150)
-    assert video.displayTitle() == 'The Matrix (1999)'
 
 
 def test_video_price_regular():
@@ -30,11 +38,6 @@ def test_video_price_extra_long():
 def test_video_extra_long_previous_year():
     video = Video('Fellowship of the Ring: Extended Edition', 2001, 250)
     assert video.rentalPrice() == 1000
-
-
-def test_video_display_price():
-    video = Video('The Matrix', 1999, 150)
-    assert video.displayPrice() == '£5.00'
 
 
 def test_video_has_title():
