@@ -1,38 +1,15 @@
-./blockbuster/test_blockbuster_challenge.py
-************* Module test_blockbuster_challenge
-blockbuster/test_blockbuster_challenge.py:7:11: E1121: Too many positional arguments for constructor call (too-many-function-args)
-blockbuster/test_blockbuster_challenge.py:18:0: C0103: Function name "test_video_release_after_1900" doesn't conform to '(?:(?P<snake_case>[a-z_]+)|(?P<PascalCase>[^a-z][A-Za-z]+)|(?P<camelCase>[^A-Z][A-Za-z]+))$' pattern (invalid-name)
-blockbuster/test_blockbuster_challenge.py:20:8: E1121: Too many positional arguments for constructor call (too-many-function-args)
-blockbuster/test_blockbuster_challenge.py:24:12: E1121: Too many positional arguments for constructor call (too-many-function-args)
-blockbuster/test_blockbuster_challenge.py:25:11: E1101: Instance of 'Video' has no 'rentalPrice' member (no-member)
-blockbuster/test_blockbuster_challenge.py:29:12: E1121: Too many positional arguments for constructor call (too-many-function-args)
-blockbuster/test_blockbuster_challenge.py:30:11: E1101: Instance of 'Video' has no 'rentalPrice' member (no-member)
-blockbuster/test_blockbuster_challenge.py:34:12: E1121: Too many positional arguments for constructor call (too-many-function-args)
-blockbuster/test_blockbuster_challenge.py:35:11: E1101: Instance of 'Video' has no 'rentalPrice' member (no-member)
-blockbuster/test_blockbuster_challenge.py:39:12: E1121: Too many positional arguments for constructor call (too-many-function-args)
-blockbuster/test_blockbuster_challenge.py:40:11: E1101: Instance of 'Video' has no 'rentalPrice' member (no-member)
-blockbuster/test_blockbuster_challenge.py:45:8: E1121: Too many positional arguments for constructor call (too-many-function-args)
-blockbuster/test_blockbuster_challenge.py:6:0: W0612: Unused variable 'the_matrix' (unused-variable)
-blockbuster/test_blockbuster_challenge.py:10:0: W0612: Unused variable 'test_video_display_price' (unused-variable)
-blockbuster/test_blockbuster_challenge.py:14:0: W0612: Unused variable 'test_video_title' (unused-variable)
-blockbuster/test_blockbuster_challenge.py:18:0: W0612: Unused variable 'test_video_release_after_1900' (unused-variable)
-blockbuster/test_blockbuster_challenge.py:23:0: W0612: Unused variable 'test_video_price_regular' (unused-variable)
-blockbuster/test_blockbuster_challenge.py:28:0: W0612: Unused variable 'test_video_price_previous_years' (unused-variable)
-blockbuster/test_blockbuster_challenge.py:33:0: W0612: Unused variable 'test_video_price_extra_long' (unused-variable)
-blockbuster/test_blockbuster_challenge.py:38:0: W0612: Unused variable 'test_video_extra_long_previous_year' (unused-variable)
-blockbuster/test_blockbuster_challenge.py:43:0: W0612: Unused variable 'test_video_has_title' (unused-variable)
-blockbuster/test_blockbuster_challenge.py:1:0: W0612: Unused variable 'Customer' (unused-variable)
-blockbuster/test_blockbuster_challenge.py:1:0: W0612: Unused variable 'VideoStore' (unused-variable)
-blockbuster/test_blockbuster_challenge.py:1:0: W0612: Unused variable 'VendingMachine' (unused-variable)
-blockbuster/test_blockbuster_challenge.py:1:0: W0612: Unused variable 'DVD' (unused-variable)
-blockbuster/test_blockbuster_challenge.py:1:0: W0611: Unused Customer imported from blockbuster_oop (unused-import)
-blockbuster/test_blockbuster_challenge.py:1:0: W0611: Unused VideoStore imported from blockbuster_oop (unused-import)
-blockbuster/test_blockbuster_challenge.py:1:0: W0611: Unused VendingMachine imported from blockbuster_oop (unused-import)
-blockbuster/test_blockbuster_challenge.py:1:0: W0611: Unused DVD imported from blockbuster_oop (unused-import)
+./blackjack/test_blackjack_oop.py
+./blackjack/blackjack_oop.py
+************* Module blackjack_oop
+blackjack/blackjack_oop.py:33:9: W0511: TODO Complete this method so the deck contains all the correct cards (fixme)
+blackjack/blackjack_oop.py:21:12: W0719: Raising too general exception: Exception (broad-exception-raised)
+blackjack/blackjack_oop.py:16:0: W0612: Unused variable 'Hand' (unused-variable)
+blackjack/blackjack_oop.py:31:0: W0612: Unused variable 'Deck' (unused-variable)
 
 -----------------------------------
-Your code has been rated at 0.00/10
+Your code has been rated at 8.26/10
 
+./blockbuster/test_blockbuster_trainee.py
 ./blockbuster/blockbuster_oop.py
 ************* Module blockbuster_oop
 blockbuster/blockbuster_oop.py:22:4: W0231: __init__ method from base class 'Video' is not called (super-init-not-called)
@@ -45,52 +22,4 @@ blockbuster/blockbuster_oop.py:26:0: W0612: Unused variable 'VendingMachine' (un
 -----------------------------------
 Your code has been rated at 6.67/10
 
-./blockbuster/test_blockbuster_trainee.py
-************* Module test_blockbuster_trainee
-blockbuster/test_blockbuster_trainee.py:5:11: E1121: Too many positional arguments for constructor call (too-many-function-args)
-blockbuster/test_blockbuster_trainee.py:6:11: E1101: Instance of 'Customer' has no 'name' member (no-member)
-blockbuster/test_blockbuster_trainee.py:4:0: W0612: Unused variable 'test_customer_name' (unused-variable)
-blockbuster/test_blockbuster_trainee.py:1:0: W0612: Unused variable 'Video' (unused-variable)
-blockbuster/test_blockbuster_trainee.py:1:0: W0612: Unused variable 'VideoStore' (unused-variable)
-blockbuster/test_blockbuster_trainee.py:1:0: W0612: Unused variable 'VendingMachine' (unused-variable)
-blockbuster/test_blockbuster_trainee.py:1:0: W0612: Unused variable 'DVD' (unused-variable)
-blockbuster/test_blockbuster_trainee.py:1:0: W0611: Unused Video imported from blockbuster_oop (unused-import)
-blockbuster/test_blockbuster_trainee.py:1:0: W0611: Unused VideoStore imported from blockbuster_oop (unused-import)
-blockbuster/test_blockbuster_trainee.py:1:0: W0611: Unused VendingMachine imported from blockbuster_oop (unused-import)
-blockbuster/test_blockbuster_trainee.py:1:0: W0611: Unused DVD imported from blockbuster_oop (unused-import)
-
------------------------------------
-Your code has been rated at 0.00/10
-
-./blackjack/blackjack_oop.py
-************* Module blackjack_oop
-blackjack/blackjack_oop.py:33:9: W0511: TODO Complete this method so the deck contains all the correct cards (fixme)
-blackjack/blackjack_oop.py:21:12: W0719: Raising too general exception: Exception (broad-exception-raised)
-blackjack/blackjack_oop.py:16:0: W0612: Unused variable 'Hand' (unused-variable)
-blackjack/blackjack_oop.py:31:0: W0612: Unused variable 'Deck' (unused-variable)
-
------------------------------------
-Your code has been rated at 8.26/10
-
-./blackjack/test_blackjack_oop.py
-************* Module test_blackjack_oop
-blackjack/test_blackjack_oop.py:6:0: W0612: Unused variable 'jack_of_hearts' (unused-variable)
-blackjack/test_blackjack_oop.py:11:0: W0612: Unused variable 'three_of_spades' (unused-variable)
-blackjack/test_blackjack_oop.py:16:0: W0612: Unused variable 'ace_of_diamonds' (unused-variable)
-blackjack/test_blackjack_oop.py:21:0: W0612: Unused variable 'ace_of_clubs' (unused-variable)
-blackjack/test_blackjack_oop.py:25:0: W0612: Unused variable 'test_card_rank' (unused-variable)
-blackjack/test_blackjack_oop.py:29:0: W0612: Unused variable 'test_card_suit' (unused-variable)
-blackjack/test_blackjack_oop.py:33:0: W0612: Unused variable 'test_card_uppercased' (unused-variable)
-blackjack/test_blackjack_oop.py:38:0: W0612: Unused variable 'test_card_points' (unused-variable)
-blackjack/test_blackjack_oop.py:43:0: W0612: Unused variable 'test_card_to_string' (unused-variable)
-blackjack/test_blackjack_oop.py:48:0: W0612: Unused variable 'test_hand_raise_exception' (unused-variable)
-blackjack/test_blackjack_oop.py:53:0: W0612: Unused variable 'test_hand_points_empty' (unused-variable)
-blackjack/test_blackjack_oop.py:57:0: W0612: Unused variable 'test_hand_points_numbers_only' (unused-variable)
-blackjack/test_blackjack_oop.py:62:0: W0612: Unused variable 'test_hand_points_numbers_and_face' (unused-variable)
-blackjack/test_blackjack_oop.py:73:0: W0612: Unused variable 'test_hand_points_two_aces' (unused-variable)
-blackjack/test_blackjack_oop.py:78:0: W0612: Unused variable 'test_hand_points_two_aces_and_others' (unused-variable)
-blackjack/test_blackjack_oop.py:86:0: W0612: Unused variable 'test_deck_generate_order' (unused-variable)
-
------------------------------------
-Your code has been rated at 6.36/10
-
+./blockbuster/test_blockbuster_challenge.py
