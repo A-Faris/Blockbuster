@@ -43,8 +43,8 @@ def test_card_points(jack_of_hearts, three_of_spades):
 
 
 def test_card_to_string(jack_of_hearts, three_of_spades):
-    assert jack_of_hearts.toString() == "JH"
-    assert three_of_spades.toString() == "3S"
+    assert jack_of_hearts.to_string() == "JH"
+    assert three_of_spades.to_string() == "3S"
 
 
 def test_hand_raise_exception():
@@ -88,7 +88,7 @@ def test_hand_points_two_aces_and_others(ace_of_diamonds, ace_of_clubs):
 def test_deck_generate_order():
     deck = Deck()
 
-    cards_in_deck = list(map(lambda num: deck.draw().toString(), deck.cards))
+    cards_in_deck = [deck.draw().to_string() for i in range(len(deck.cards))]
 
     assert cards_in_deck == [
         "AS", "2S", "3S", "4S", "5S", "6S", "7S", "8S", "9S", "10S", "JS", "QS", "KS",
