@@ -1,3 +1,5 @@
+# pylint: skip-file
+
 from blockbuster_oop import Video, Customer, VideoStore, VendingMachine, DVD
 
 

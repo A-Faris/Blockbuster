@@ -1,3 +1,5 @@
+# pylint: skip-file
+
 from blackjack_oop import Deck, Card, Hand
 import pytest
 
