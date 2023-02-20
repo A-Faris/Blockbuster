@@ -10,11 +10,11 @@ def the_matrix():
 
 
 def test_video_display_price(the_matrix):
-    assert the_matrix.displayPrice() == '£5.00'
+    assert the_matrix.display_price() == '£5.00'
 
 
 def test_video_title(the_matrix):
-    assert the_matrix.displayTitle() == 'The Matrix (1999)'
+    assert the_matrix.display_title() == 'The Matrix (1999)'
 
 
 def test_video_release_after_1900():
@@ -24,22 +24,22 @@ def test_video_release_after_1900():
 
 def test_video_price_regular():
     video = Video('Mission Impossible 8', 2023, 90)
-    assert video.rentalPrice() == 1000
+    assert video.rental_price() == 1000
 
 
 def test_video_price_previous_years():
     video = Video('The Mummy', 1999, 124)
-    assert video.rentalPrice() == 500
+    assert video.rental_price() == 500
 
 
 def test_video_price_extra_long():
     video = Video("Zack Snyder's Justice League",  2023, 242)
-    assert video.rentalPrice() == 2000
+    assert video.rental_price() == 2000
 
 
 def test_video_extra_long_previous_year():
     video = Video('Fellowship of the Ring: Extended Edition', 2001, 250)
-    assert video.rentalPrice() == 1000
+    assert video.rental_price() == 1000
 
 
 def test_video_has_title():
