@@ -1,17 +1,7 @@
 {
  "files": [
   {
-   "file_name": "./blackjack/test_blackjack_oop.py",
-   "errors": [
-    "blackjack/blackjack_oop.py:33:9: W0511: TODO Complete this method so the deck contains all the correct cards (fixme)",
-    "blackjack/blackjack_oop.py:21:12: W0719: Raising too general exception: Exception (broad-exception-raised)",
-    "blackjack/blackjack_oop.py:16:0: W0612: Unused variable 'Hand' (unused-variable)",
-    "blackjack/blackjack_oop.py:31:0: W0612: Unused variable 'Deck' (unused-variable)"
-   ],
-   "score": 82.6
-  },
-  {
-   "file_name": "./blockbuster/test_blockbuster_trainee.py",
+   "file_name": "./coding_problems/03-wednesday/wednesday.py",
    "errors": [
     "blockbuster/blockbuster_oop.py:22:4: W0231: __init__ method from base class 'Video' is not called (super-init-not-called)",
     "blockbuster/blockbuster_oop.py:27:4: W0231: __init__ method from base class 'VideoStore' is not called (super-init-not-called)",
@@ -21,7 +11,16 @@
     "blockbuster/blockbuster_oop.py:26:0: W0612: Unused variable 'VendingMachine' (unused-variable)"
    ],
    "score": 66.7
+  },
+  {
+   "file_name": "./blockbuster/test_blockbuster_challenge.py",
+   "errors": [
+    "blackjack/blackjack_oop.py:33:9: W0511: TODO Complete this method so the deck contains all the correct cards (fixme)",
+    "blackjack/blackjack_oop.py:16:0: W0612: Unused variable 'Hand' (unused-variable)",
+    "blackjack/blackjack_oop.py:31:0: W0612: Unused variable 'Deck' (unused-variable)"
+   ],
+   "score": 87.0
   }
  ],
- "average_score": 74.7
+ "average_score": 76.8
 }
