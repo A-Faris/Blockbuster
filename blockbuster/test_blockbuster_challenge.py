@@ -1,5 +1,7 @@
 # pylint: skip-file
 
+from datetime import datetime
+
 from blockbuster_oop import Video, Customer, VideoStore, VendingMachine, DVD
 import pytest
 
@@ -23,7 +25,7 @@ def test_video_release_after_1900():
 
 
 def test_video_price_regular():
-    video = Video('Mission Impossible 8', 2023, 90)
+    video = Video('Mission Impossible 8', datetime.now().year, 90)
     assert video.rental_price() == 1000
 
 
@@ -33,7 +35,7 @@ def test_video_price_previous_years():
 
 
 def test_video_price_extra_long():
-    video = Video("Zack Snyder's Justice League",  2023, 242)
+    video = Video("Zack Snyder's Justice League",  datetime.now().year, 242)
     assert video.rental_price() == 2000
 
 
