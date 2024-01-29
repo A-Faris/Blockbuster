@@ -1,13 +1,14 @@
-./coding_problems/03-wednesday/wednesday.py
-./coding_problems/03-wednesday/test_wednesday.py
 ./coding_problems/04-thursday/thursday.py
 ./coding_problems/04-thursday/test_thursday.py
-./coding_problems/01-monday/test_monday.py
-./coding_problems/01-monday/monday.py
-./coding_problems/02-tuesday/tuesday.py
 ./coding_problems/02-tuesday/test_tuesday.py
+./coding_problems/02-tuesday/tuesday.py
+./coding_problems/01-monday/monday.py
+./coding_problems/01-monday/test_monday.py
+./coding_problems/03-wednesday/wednesday.py
+./coding_problems/03-wednesday/test_wednesday.py
 ./coding_problems/05-friday/test_friday.py
 ./coding_problems/05-friday/friday.py
+./blockbuster/test_blockbuster_trainee.py
 ./blockbuster/blockbuster_oop.py
 ************* Module blockbuster_oop
 blockbuster/blockbuster_oop.py:22:4: W0231: __init__ method from base class 'Video' is not called (super-init-not-called)
@@ -21,7 +22,6 @@ blockbuster/blockbuster_oop.py:26:0: W0612: Unused variable 'VendingMachine' (un
 Your code has been rated at 6.67/10
 
 ./blockbuster/test_blockbuster_challenge.py
-./blockbuster/test_blockbuster_trainee.py
 ./blackjack/blackjack_oop.py
 ************* Module blackjack_oop
 blackjack/blackjack_oop.py:33:9: W0511: TODO Complete this method so the deck contains all the correct cards (fixme)
