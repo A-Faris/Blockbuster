@@ -1,4 +1,4 @@
-# Whats The Real Floor?
+# What's The Real Floor?
 
 Americans are odd people: in their buildings, the first floor is actually the ground floor and there is no 13th floor (due to superstition).
 
