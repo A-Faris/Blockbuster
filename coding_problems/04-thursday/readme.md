@@ -1,4 +1,4 @@
-# Immediately Before
+# Best Friend
 
 Given a string, return if a given letter always appears immediately before another given letter.
 
