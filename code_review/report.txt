@@ -24,15 +24,16 @@ Your code has been rated at 8.06/10
 ./blockbuster/test_blockbuster_challenge.py
 ./blockbuster/blockbuster_oop.py
 ************* Module blockbuster_oop
-blockbuster/blockbuster_oop.py:9:11: C0121: Comparison 'title == None' should be 'title is None' (singleton-comparison)
-blockbuster/blockbuster_oop.py:48:4: W0231: __init__ method from base class 'Video' is not called (super-init-not-called)
-blockbuster/blockbuster_oop.py:53:4: W0231: __init__ method from base class 'VideoStore' is not called (super-init-not-called)
-blockbuster/blockbuster_oop.py:32:0: W0612: Unused variable 'Customer' (unused-variable)
-blockbuster/blockbuster_oop.py:42:0: W0612: Unused variable 'Rental' (unused-variable)
-blockbuster/blockbuster_oop.py:47:0: W0612: Unused variable 'DVD' (unused-variable)
-blockbuster/blockbuster_oop.py:52:0: W0612: Unused variable 'VendingMachine' (unused-variable)
+blockbuster/blockbuster_oop.py:63:4: W0231: __init__ method from base class 'Video' is not called (super-init-not-called)
+blockbuster/blockbuster_oop.py:70:4: W0231: __init__ method from base class 'VideoStore' is not called (super-init-not-called)
+blockbuster/blockbuster_oop.py:39:0: W0612: Unused variable 'Customer' (unused-variable)
+blockbuster/blockbuster_oop.py:53:0: W0612: Unused variable 'Rental' (unused-variable)
+blockbuster/blockbuster_oop.py:60:0: W0612: Unused variable 'DVD' (unused-variable)
+blockbuster/blockbuster_oop.py:67:0: W0612: Unused variable 'VendingMachine' (unused-variable)
 
 -----------------------------------
-Your code has been rated at 8.21/10
+Your code has been rated at 8.46/10
 
 ./blockbuster/test_blockbuster_trainee.py
+************* Module test_blockbuster_trainee
+blockbuster/test_blockbuster_trainee.py:10:10: E0001: Parsing failed: 'expected '(' (test_blockbuster_trainee, line 10)' (syntax-error)
