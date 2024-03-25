@@ -1,26 +1,30 @@
 {
  "files": [
   {
-   "file_name": "./coding_problems/04-thursday/thursday.py",
+   "file_name": "./coding_problems/02-tuesday/test_tuesday.py",
    "errors": [
-    "blockbuster/blockbuster_oop.py:22:4: W0231: __init__ method from base class 'Video' is not called (super-init-not-called)",
-    "blockbuster/blockbuster_oop.py:27:4: W0231: __init__ method from base class 'VideoStore' is not called (super-init-not-called)",
-    "blockbuster/blockbuster_oop.py:6:0: W0612: Unused variable 'Customer' (unused-variable)",
-    "blockbuster/blockbuster_oop.py:16:0: W0612: Unused variable 'Rental' (unused-variable)",
-    "blockbuster/blockbuster_oop.py:21:0: W0612: Unused variable 'DVD' (unused-variable)",
-    "blockbuster/blockbuster_oop.py:26:0: W0612: Unused variable 'VendingMachine' (unused-variable)"
+    "blackjack/blackjack_oop.py:44:9: W0511: TODO Complete this method so the deck contains all the correct cards (fixme)",
+    "blackjack/blackjack_oop.py:15:24: R6201: Consider using set for membership test (use-set-for-membership)",
+    "blackjack/blackjack_oop.py:40:4: C0103: Class attribute name \"suits\" doesn't conform to PascalCase naming style (invalid-name)",
+    "blackjack/blackjack_oop.py:41:4: C0103: Class attribute name \"ranks\" doesn't conform to PascalCase naming style (invalid-name)",
+    "blackjack/blackjack_oop.py:20:0: W0612: Unused variable 'Hand' (unused-variable)",
+    "blackjack/blackjack_oop.py:39:0: W0612: Unused variable 'Deck' (unused-variable)"
    ],
-   "score": 66.7
+   "score": 80.6
   },
   {
    "file_name": "./blockbuster/test_blockbuster_challenge.py",
    "errors": [
-    "blackjack/blackjack_oop.py:33:9: W0511: TODO Complete this method so the deck contains all the correct cards (fixme)",
-    "blackjack/blackjack_oop.py:16:0: W0612: Unused variable 'Hand' (unused-variable)",
-    "blackjack/blackjack_oop.py:31:0: W0612: Unused variable 'Deck' (unused-variable)"
+    "blockbuster/blockbuster_oop.py:9:11: C0121: Comparison 'title == None' should be 'title is None' (singleton-comparison)",
+    "blockbuster/blockbuster_oop.py:48:4: W0231: __init__ method from base class 'Video' is not called (super-init-not-called)",
+    "blockbuster/blockbuster_oop.py:53:4: W0231: __init__ method from base class 'VideoStore' is not called (super-init-not-called)",
+    "blockbuster/blockbuster_oop.py:32:0: W0612: Unused variable 'Customer' (unused-variable)",
+    "blockbuster/blockbuster_oop.py:42:0: W0612: Unused variable 'Rental' (unused-variable)",
+    "blockbuster/blockbuster_oop.py:47:0: W0612: Unused variable 'DVD' (unused-variable)",
+    "blockbuster/blockbuster_oop.py:52:0: W0612: Unused variable 'VendingMachine' (unused-variable)"
    ],
-   "score": 87.0
+   "score": 82.1
   }
  ],
- "average_score": 76.8
+ "average_score": 81.3
 }
