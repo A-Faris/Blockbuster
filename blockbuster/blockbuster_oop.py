@@ -39,8 +39,21 @@ class Video:
 class Customer:
     """Customer"""
 
-    def __init__(self):
+    def __init__(self, first_name: str, last_name: str, date_of_birth: str) -> None:
         print("Customer Init")
+        self.first_name = first_name
+        self.last_name = last_name
+        self.date_of_birth = date_of_birth
+
+    @property
+    def name(self) -> str:
+        return f"{self.first_name} {self.last_name}"
+
+    def age(self, number: int) -> int:
+        try:
+            return int(number)
+        except:
+            raise ValueError
 
 
 class VideoStore:
