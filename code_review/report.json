@@ -15,16 +15,16 @@
   {
    "file_name": "./blockbuster/test_blockbuster_challenge.py",
    "errors": [
-    "blockbuster/blockbuster_oop.py:56:12: W0707: Consider explicitly re-raising using 'except Exception as exc' and 'raise ValueError from exc' (raise-missing-from)",
-    "blockbuster/blockbuster_oop.py:76:4: W0231: __init__ method from base class 'Video' is not called (super-init-not-called)",
-    "blockbuster/blockbuster_oop.py:83:4: W0231: __init__ method from base class 'VideoStore' is not called (super-init-not-called)",
-    "blockbuster/blockbuster_oop.py:39:0: W0612: Unused variable 'Customer' (unused-variable)",
-    "blockbuster/blockbuster_oop.py:66:0: W0612: Unused variable 'Rental' (unused-variable)",
-    "blockbuster/blockbuster_oop.py:73:0: W0612: Unused variable 'DVD' (unused-variable)",
-    "blockbuster/blockbuster_oop.py:80:0: W0612: Unused variable 'VendingMachine' (unused-variable)"
+    "blockbuster/blockbuster_oop.py:26:24: E1101: Module 'datetime' has no 'now' member (no-member)",
+    "blockbuster/blockbuster_oop.py:99:4: W0231: __init__ method from base class 'Video' is not called (super-init-not-called)",
+    "blockbuster/blockbuster_oop.py:106:4: W0231: __init__ method from base class 'VideoStore' is not called (super-init-not-called)",
+    "blockbuster/blockbuster_oop.py:40:0: W0612: Unused variable 'Customer' (unused-variable)",
+    "blockbuster/blockbuster_oop.py:89:0: W0612: Unused variable 'Rental' (unused-variable)",
+    "blockbuster/blockbuster_oop.py:96:0: W0612: Unused variable 'DVD' (unused-variable)",
+    "blockbuster/blockbuster_oop.py:103:0: W0612: Unused variable 'VendingMachine' (unused-variable)"
    ],
-   "score": 85.7
+   "score": 82.8
   }
  ],
- "average_score": 83.2
+ "average_score": 81.7
 }
