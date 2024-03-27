@@ -1,6 +1,6 @@
 """Blockbuster"""
 
-import datetime
+from datetime import datetime, date, timedelta
 
 
 class Video:
@@ -45,6 +45,7 @@ class Customer:
         self.first_name = first_name
         self.last_name = last_name
         self.date_of_birth = date_of_birth
+        self.outstanding_fine = 0
         self.age()
 
     @property
@@ -56,16 +57,23 @@ class Customer:
         """Calculates age"""
         if age is None:
             day, month, year = map(int, self.date_of_birth.split("/"))
-            today = datetime.date.today()
+            today = date.today()
             age = today.year - year - ((today.month, today.day) < (month, day))
 
         if age < 13:
-            raise ValueError
+            raise ValueError("You are too young")
 
-        try:
+        if type(age) == int:
             return age
-        except Exception as exc:
-            raise ValueError("Must be an integer") from exc
+        raise ValueError("Must be an integer")
+
+
+class Rental:
+    """Rental"""
+
+    def __init__(self):
+        print("Rental Init")
+        self.due_date = date.today() + timedelta(weeks=2)
 
 
 class VideoStore:
@@ -78,19 +86,34 @@ class VideoStore:
         else:
             raise ValueError
 
-    def find_video_by_title(self, title: str) -> Video:
+        self.availability = {}
+        for video in videos:
+            if isinstance(video, Video):
+                self.availability[video.title] = True
+            else:
+                raise TypeError("Only videos are accepted")
+
+    def find_video_by_title(self, video_title: str) -> Video:
         """Show title"""
         for video in self.videos:
-            if title in video.display_title():
+            if video_title in video.display_title():
                 return video.display_title()
         raise ValueError("This video does not exist")
 
+    def is_available(self, video_title: str) -> bool:
+        if self.availability.get(video_title):
+            return self.availability.get(video_title)
+        raise ValueError
 
-class Rental:
-    """Rental"""
+    def rent_video(self, title: str, customer: Customer) -> Rental:
+        if self.find_video_by_title(title) and isinstance(customer, Customer):
+            self.availability[title] = False
+            return Rental()
+        else:
+            raise ValueError("Customer doesn't exist")
 
-    def __init__(self):
-        print("Rental Init")
+    def return_video(self, rental: Rental, return_date: str):
+        ...
 
 
 class DVD(Video):
@@ -105,3 +128,15 @@ class VendingMachine(VideoStore):
 
     def __init__(self):
         print("VendingMachine Init")
+
+
+john_smith = Customer('John', 'Smith', '24/01/1980')
+# print(john_smith.age(34))
+
+matrix = Video('The Matrix', 1999, 150)
+terminator = Video('The Terminator', 1985, 108)
+video = VideoStore([matrix, terminator])
+
+
+video.rent_video("The Matrix", john_smith)
+print(video.availability)

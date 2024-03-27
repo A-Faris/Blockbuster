@@ -28,16 +28,17 @@ def test_age(john_smith):
 
 
 def test_age_float(john_smith):
-    john_smith.age(34.5) == ValueError
+    with pytest.raises(Exception):
+        john_smith.age(34.5)
 
 
 def test_age_young():
-    with pytest.raises(Exception):
+    with pytest.raises(ValueError):
         Customer("Jimmy", "Jimmy", '24/01/2020')
 
 
 def test_age_young_second(john_smith):
-    with pytest.raises(Exception):
+    with pytest.raises(ValueError):
         john_smith.age(12)
 
 
@@ -49,14 +50,27 @@ def video():
 
 
 def test_VideoStore_no_videos():
-    with pytest.raises(Exception):
+    with pytest.raises(ValueError):
         VideoStore([])
 
 
 def test_display_title(video):
-    video.find_video_by_title('The Matrix') == 'The Matrix'
+    assert video.find_video_by_title('The Matrix') == 'The Matrix (1999)'
 
 
 def test_display_title_not_real(video):
-    with pytest.raises(Exception):
+    with pytest.raises(ValueError):
         video.find_video_by_title('Not here')
+
+
+def test_is_available_true(video):
+    assert video.is_available('The Matrix') == True
+
+
+def test_is_available_not_real(video):
+    with pytest.raises(ValueError):
+        video.is_available('not here')
+
+
+def test_rent_video(video, john_smith):
+    assert video.rent_video('The Matrix', john_smith) == "HI"
