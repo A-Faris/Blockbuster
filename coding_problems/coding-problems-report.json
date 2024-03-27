@@ -1,12 +1,12 @@
 {
-    "created": 1711461631.9278636,
-    "duration": 4.715388298034668,
+    "created": 1711540915.2771447,
+    "duration": 1.9631578922271729,
     "exitcode": 1,
     "root": "/home/runner/work/Coursework-Fundamentals-Week2/Coursework-Fundamentals-Week2/coding_problems",
     "environment": {},
     "summary": {
-        "failed": 448,
-        "passed": 54,
+        "passed": 268,
+        "failed": 234,
         "total": 502,
         "collected": 502
     }
