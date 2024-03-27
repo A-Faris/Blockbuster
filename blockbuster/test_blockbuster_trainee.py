@@ -1,6 +1,6 @@
 # pylint: skip-file
 
-from blockbuster_oop import Video, Customer, VideoStore, VendingMachine, DVD
+from blockbuster_oop import Video, Customer, VideoStore, VendingMachine, DVD, Rental
 
 import pytest
 
@@ -55,7 +55,7 @@ def test_VideoStore_no_videos():
 
 
 def test_display_title(video):
-    assert video.find_video_by_title('The Matrix') == 'The Matrix (1999)'
+    assert video.find_video_by_title('The Matrix') == 'The Matrix'
 
 
 def test_display_title_not_real(video):
@@ -73,4 +73,4 @@ def test_is_available_not_real(video):
 
 
 def test_rent_video(video, john_smith):
-    assert video.rent_video('The Matrix', john_smith) == "HI"
+    assert isinstance(video.rent_video('The Matrix', john_smith), Rental)
