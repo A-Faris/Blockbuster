@@ -3,6 +3,18 @@
 from datetime import datetime, timedelta
 
 OLDEST_MOVIE_YEAR = 1900
+MAX_RUNTIME = 1440
+MIN_RUNTIME = 10
+THIS_YEAR_VIDEO_RENT = 1000
+STANDARD_VIDEO_RENT = 500
+YOUTH_AGE = 13
+MAX_CUSTOMER_RENT = 50000
+STANDARD_DVD_RENT = 1200
+
+
+class VideoError(Exception):
+    """Video Error"""
+    pass
 
 
 class Video:
@@ -11,9 +23,11 @@ class Video:
     def __init__(self, video_title: str, year: int, runtime: int) -> None:
         print("Video Init")
         if year < OLDEST_MOVIE_YEAR:
-            raise ValueError("Videos can't be released before 1900")
+            raise VideoError("Videos can't be released before 1900")
         if not video_title:
-            raise ValueError("Title must be provided")
+            raise VideoError("Title must be provided")
+        if not MIN_RUNTIME < runtime < MAX_RUNTIME:
+            raise VideoError("runtime is wrong length")
         self.video_title = video_title
         self.year = year
         self.runtime = runtime
@@ -25,11 +39,10 @@ class Video:
 
     def rental_price(self) -> int:
         """Calculates rental price"""
-        price = 0
         if self.year == datetime.now().year:
-            price = 1000
+            price = THIS_YEAR_VIDEO_RENT
         else:
-            price = 500
+            price = STANDARD_VIDEO_RENT
         if self.runtime > 240:
             return price * 2
         return price
@@ -42,13 +55,13 @@ class Video:
     def watch(self) -> None:
         """Watching"""
         if self.is_rewound == False:
-            raise ValueError("Video isn't rewinded")
+            raise VideoError("Video isn't rewinded")
         self.is_rewound = False
 
     def rewind(self) -> None:
         """Rewinding"""
         if self.is_rewound == True:
-            raise ValueError("Video has already been rewinded")
+            raise VideoError("Video has already been rewinded")
         self.is_rewound = True
 
 
@@ -75,12 +88,12 @@ class Customer:
             today = datetime.today()
             age = today.year - year - ((today.month, today.day) < (month, day))
 
-        if age < 13:
-            raise ValueError("You are too young")
+        if age < YOUTH_AGE:
+            raise VideoError("You are too young")
 
         if isinstance(age, int):
             return age
-        raise ValueError("Must be an integer")
+        raise VideoError("Must be an integer")
 
     def pay_off_fine(self):
         self.outstanding_fine = 0
@@ -104,7 +117,7 @@ class VideoStore:
         if 0 < len(videos) <= max_videos:
             self.videos_in_stock = videos
         else:
-            raise ValueError(f"Can only hold a maximum of {max_videos} Videos")
+            raise VideoError(f"Can only hold a maximum of {max_videos} Videos")
 
         self.availability = {}
         for video in videos:
@@ -118,24 +131,24 @@ class VideoStore:
         for video_in_stock in self.videos_in_stock:
             if video_title == video_in_stock.video_title:
                 return video_in_stock
-        raise ValueError("This video does not exist")
+        raise VideoError("This video does not exist")
 
     def is_available(self, video: Video) -> bool:
         """Check availability of video"""
         print(self.availability, video)
         if self.availability.get(video):
             return self.availability.get(video)
-        raise ValueError
+        raise VideoError("Video is not available")
 
     def rent_video(self, video: Video, customer: Customer) -> Rental:
         """Rent video"""
-        if customer.outstanding_fine > 5000:
-            raise ValueError("Pay off your fines first")
+        if customer.outstanding_fine > MAX_CUSTOMER_RENT:
+            raise VideoError("Pay off your fines first")
 
         if isinstance(video, Video) and isinstance(customer, Customer):
             self.availability[video] = False
             return Rental(video, customer)
-        raise ValueError("Customer doesn't exist")
+        raise VideoError("Customer doesn't exist")
 
     def fine(self, rental: Rental) -> int:
         return rental.video.rental_price()
@@ -143,11 +156,11 @@ class VideoStore:
     def return_video(self, rental: Rental, return_date: str) -> None:
         """Return video before due date or get fined"""
         if not rental or not return_date:
-            raise ValueError("Give rental details and return date")
+            raise VideoError("Give rental details and return date")
         if not isinstance(rental, Rental) or not isinstance(return_date, str):
             raise TypeError("Give inputs in valid type")
         if not rental.video.is_rewound:
-            raise ValueError("Video needs to be rewound first")
+            raise VideoError("Video needs to be rewound first")
 
         return_date = datetime.strptime(return_date, '%d/%m/%Y')
         if return_date > rental.due_date:
@@ -160,7 +173,7 @@ class DVD(Video):
     """DVD"""
 
     def rental_price(self) -> int:
-        return 1200
+        return STANDARD_DVD_RENT
 
     def watch(self):
         self.is_rewound = True
@@ -177,15 +190,15 @@ class VendingMachine(VideoStore):
         return 0
 
 
-john_smith = Customer('John', 'Smith', '24/01/1980')
-print(john_smith.calculate_age(34))
+# john_smith = Customer('John', 'Smith', '24/01/1980')
+# print(john_smith.calculate_age(34))
 
-matrix = Video('The Matrix', 1999, 150)
-terminator = Video('The Terminator', 1985, 108)
-video_example = VideoStore([matrix, terminator])
+# matrix = Video('The Matrix', 1999, 150)
+# terminator = Video('The Terminator', 1985, 108)
+# video_example = VideoStore([matrix, terminator])
 
 
-video_example.rent_video(matrix, john_smith)
-print(video_example.availability)
+# video_example.rent_video(matrix, john_smith)
+# print(video_example.availability)
 
-video_example.return_video(Rental(matrix, john_smith), "27/03/2024")
+# video_example.return_video(Rental(matrix, john_smith), "27/03/2024")
