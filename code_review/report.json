@@ -15,13 +15,14 @@
   {
    "file_name": "./blockbuster/test_blockbuster_challenge.py",
    "errors": [
-    "blockbuster/blockbuster_oop.py:44:11: C0121: Comparison 'self.is_rewound == False' should be 'self.is_rewound is False' if checking for the singleton value False, or 'not self.is_rewound' if testing for falsiness (singleton-comparison)",
-    "blockbuster/blockbuster_oop.py:50:11: C0121: Comparison 'self.is_rewound == True' should be 'self.is_rewound is True' if checking for the singleton value True, or 'self.is_rewound' if testing for truthiness (singleton-comparison)",
-    "blockbuster/blockbuster_oop.py:159:0: W0612: Unused variable 'DVD' (unused-variable)",
-    "blockbuster/blockbuster_oop.py:169:0: W0612: Unused variable 'VendingMachine' (unused-variable)"
+    "blockbuster/blockbuster_oop.py:17:4: W0107: Unnecessary pass statement (unnecessary-pass)",
+    "blockbuster/blockbuster_oop.py:57:11: C0121: Comparison 'self.is_rewound == False' should be 'self.is_rewound is False' if checking for the singleton value False, or 'not self.is_rewound' if testing for falsiness (singleton-comparison)",
+    "blockbuster/blockbuster_oop.py:63:11: C0121: Comparison 'self.is_rewound == True' should be 'self.is_rewound is True' if checking for the singleton value True, or 'self.is_rewound' if testing for truthiness (singleton-comparison)",
+    "blockbuster/blockbuster_oop.py:172:0: W0612: Unused variable 'DVD' (unused-variable)",
+    "blockbuster/blockbuster_oop.py:182:0: W0612: Unused variable 'VendingMachine' (unused-variable)"
    ],
-   "score": 96.7
+   "score": 96.0
   }
  ],
- "average_score": 88.7
+ "average_score": 88.3
 }
