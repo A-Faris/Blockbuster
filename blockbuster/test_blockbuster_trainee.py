@@ -24,12 +24,12 @@ def test_date_of_birth(john_smith):
 
 
 def test_age(john_smith):
-    john_smith.age() == 34
+    john_smith.calculate_age() == 34
 
 
 def test_age_float(john_smith):
     with pytest.raises(Exception):
-        john_smith.age(34.5)
+        john_smith.calculate_age(34.5)
 
 
 def test_age_young():
@@ -39,13 +39,21 @@ def test_age_young():
 
 def test_age_young_second(john_smith):
     with pytest.raises(ValueError):
-        john_smith.age(12)
+        john_smith.calculate_age(12)
 
 
 @pytest.fixture
-def video():
-    matrix = Video('The Matrix', 1999, 150)
-    terminator = Video('The Terminator', 1985, 108)
+def matrix():
+    return Video('The Matrix', 1999, 150)
+
+
+@pytest.fixture
+def terminator():
+    return Video('The Terminator', 1985, 108)
+
+
+@pytest.fixture
+def videostore(matrix, terminator):
     return VideoStore([matrix, terminator])
 
 
@@ -54,23 +62,91 @@ def test_VideoStore_no_videos():
         VideoStore([])
 
 
-def test_display_title(video):
-    assert video.find_video_by_title('The Matrix') == 'The Matrix'
+def test_display_title(videostore):
+    assert isinstance(videostore.find_video_by_title('The Matrix'), Video)
 
 
-def test_display_title_not_real(video):
+def test_display_title_not_real(videostore):
     with pytest.raises(ValueError):
-        video.find_video_by_title('Not here')
+        videostore.find_video_by_title('Not here')
 
 
-def test_is_available_true(video):
-    assert video.is_available('The Matrix') == True
+def test_is_available_true(videostore, matrix):
+    assert videostore.is_available(matrix) == True
 
 
-def test_is_available_not_real(video):
+def test_is_available_not_real(videostore):
     with pytest.raises(ValueError):
-        video.is_available('not here')
+        videostore.is_available('not here')
 
 
-def test_rent_video(video, john_smith):
-    assert isinstance(video.rent_video('The Matrix', john_smith), Rental)
+def test_rent_video(videostore, john_smith, matrix):
+    assert isinstance(videostore.rent_video(matrix, john_smith), Rental)
+
+
+@pytest.fixture
+def dvd_rental(matrix, john_smith):
+    return Rental(matrix, john_smith)
+
+
+def test_return_video(dvd_rental, videostore):
+    videostore.return_video(dvd_rental, '27/03/2024')
+    assert dvd_rental.customer.outstanding_fine == 0
+
+
+def test_return_video_late(dvd_rental, videostore):
+    videostore.return_video(dvd_rental, '27/03/2025')
+    assert dvd_rental.customer.outstanding_fine == 500
+
+
+def test_watch(matrix):
+    matrix.watch()
+    assert matrix.is_rewound == False
+
+
+def test_rewind(matrix):
+    matrix.watch()
+    matrix.rewind()
+    assert matrix.is_rewound == True
+
+
+def test_rewind_before_returning(matrix, videostore, dvd_rental):
+    matrix.watch()
+    with pytest.raises(ValueError):
+        videostore.return_video(dvd_rental, '27/03/2024')
+
+
+def test_pay_fine_before_renting(matrix, john_smith, videostore):
+    john_smith.outstanding_fine = 5001
+    with pytest.raises(ValueError):
+        videostore.rent_video(matrix, john_smith)
+
+
+def test_fine_paid_before_renting(matrix, john_smith, videostore):
+    john_smith.outstanding_fine = 5001
+    john_smith.pay_off_fine()
+    assert isinstance(videostore.rent_video(matrix, john_smith), Rental)
+
+
+@pytest.fixture
+def dvd():
+    return DVD('The Matrix', 1999, 150)
+
+
+@pytest.fixture
+def dvd_rental(dvd, john_smith):
+    return Rental(dvd, john_smith)
+
+
+def test_dvd_rent():
+    assert DVD.rental_price() == 1200
+
+
+def test_return_video_late(dvd_rental, videostore):
+    videostore.return_video(dvd_rental, '27/03/2025')
+    assert dvd_rental.customer.outstanding_fine == 1200
+
+
+def test_dvd_rewind_before_returning(dvd, videostore, dvd_rental):
+    dvd.watch()
+    assert videostore.return_video(dvd_rental, '27/03/2024')
