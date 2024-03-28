@@ -15,18 +15,13 @@
   {
    "file_name": "./blockbuster/test_blockbuster_challenge.py",
    "errors": [
-    "blockbuster/blockbuster_oop.py:76:11: C0123: Use isinstance() rather than type() for a typecheck. (unidiomatic-typecheck)",
-    "blockbuster/blockbuster_oop.py:121:8: R1705: Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)",
-    "blockbuster/blockbuster_oop.py:135:8: W0104: Statement seems to have no effect (pointless-statement)",
-    "blockbuster/blockbuster_oop.py:135:8: C0121: Comparison 'self.availability[rental.video_title] == True' should be 'self.availability[rental.video_title] is True' if checking for the singleton value True, or 'bool(self.availability[rental.video_title])' if testing for truthiness (singleton-comparison)",
-    "blockbuster/blockbuster_oop.py:142:4: W0231: __init__ method from base class 'Video' is not called (super-init-not-called)",
-    "blockbuster/blockbuster_oop.py:149:4: W0231: __init__ method from base class 'VideoStore' is not called (super-init-not-called)",
-    "blockbuster/blockbuster_oop.py:139:0: W0612: Unused variable 'DVD' (unused-variable)",
-    "blockbuster/blockbuster_oop.py:146:0: W0612: Unused variable 'VendingMachine' (unused-variable)",
-    "blockbuster/blockbuster_oop.py:153:0: W0612: Unused variable 'john_smith' (unused-variable)"
+    "blockbuster/blockbuster_oop.py:44:11: C0121: Comparison 'self.is_rewound == False' should be 'self.is_rewound is False' if checking for the singleton value False, or 'not self.is_rewound' if testing for falsiness (singleton-comparison)",
+    "blockbuster/blockbuster_oop.py:50:11: C0121: Comparison 'self.is_rewound == True' should be 'self.is_rewound is True' if checking for the singleton value True, or 'self.is_rewound' if testing for truthiness (singleton-comparison)",
+    "blockbuster/blockbuster_oop.py:159:0: W0612: Unused variable 'DVD' (unused-variable)",
+    "blockbuster/blockbuster_oop.py:169:0: W0612: Unused variable 'VendingMachine' (unused-variable)"
    ],
-   "score": 90.2
+   "score": 96.7
   }
  ],
- "average_score": 85.4
+ "average_score": 88.7
 }
